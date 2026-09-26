@@ -1,0 +1,33 @@
+{
+  "name": "stealth-browser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron main.js",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0",
+    "node-gyp": "^11.5.0"
+  },
+  "build": {
+    "appId": "com.divstack.stealthbrowser",
+    "productName": "Stealth Browser",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
